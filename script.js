@@ -37,7 +37,7 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
 const num = Number('23');
-*/
+
 
 //function calcAge1(birthYear) {  //function declaration
     //const age = 2037 - birthYear;
@@ -64,3 +64,24 @@ console.log(age1, age2);
  // return 2037 - birthYear;
 //}
 // Preferences determines the type of functions to use
+*/
+
+//function expression
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear; 
+}
+
+// Arrow function  -- do not get this keyword
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    //return retirement;
+    return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+console.log(yearsUntilRetirement(1980, 'Bob'));
