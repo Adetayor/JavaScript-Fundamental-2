@@ -12,6 +12,7 @@ if (hasDriversLicense) console.log('I can drive :D');
 //const private = 534;
 //const if = 23;
 
+//Functions
 //Function is a piece of code that we can reuse over and over again in our code, function is like variable
 //variable holds value but a function holds a complete line of code or more.
 function logger() {
@@ -24,7 +25,7 @@ logger();
 logger();
 
 function fruitProcessor(apples, oranges) {
-  console.log(apples, oranges);
+  //console.log(apples, oranges);
   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
   return juice;
 }
@@ -64,7 +65,6 @@ console.log(age1, age2);
  // return 2037 - birthYear;
 //}
 // Preferences determines the type of functions to use
-*/
 
 //function expression
 const calcAge2 = function (birthYear) {
@@ -85,3 +85,17 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1980, 'Bob'));
+*/
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+}
+console.log(fruitProcessor(2,3));
