@@ -99,7 +99,7 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2,3));
-*/
+
 
 const calcAge = function(birthYear) {
   return 2037 - birthYear;
@@ -110,14 +110,59 @@ const yearsUntilRetirement = function (birthYear, firstName) {
   const retirement = 65 - age;
   
   if(retirement > 0) {
-    return retirement;
     console.log`${firstName} retires in ${retirement} years`;
+    return retirement; //No code is executed after the return statements
   } else {
+    console.log(`${firstName} has already retired 🎊`)  //console.log is also a function and another function call
     return -1;
-    console.log(`${firstName} has already retired 🎊`)
   }
 
 }
 
 console.log(yearsUntilRetirement(1991, 'Jones'));
 console.log(yearsUntilRetirement(1970, 'Mike'));
+*/
+
+//Arrays
+const friend1 = 'Micheal';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+console.log(friends);
+
+const yars = new Array(1991, 1994, 2008, 2020);
+
+console.log(friends[0]);// positions in the array
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]); //we can any expression not statements inside this literals bracket [] it doesnt has to be a number
+
+friends[2] = 'Jay'; //To replace any position in the Array
+console.log(friends);  //Only primitive values are immuteable (cannot be changed) an array is not a primative value, so it can always be changed
+//friends = ['Bob', 'Alice']; // But what we cannot do is replace the entire array
+
+const firstName = 'Jonas'//An array can hold values of differents types all at the same time
+const jonas = [firstName, 'Schmedtamm', 2037 - 1991, 'teacher', friends];
+console.log(jonas);
+console.log(jonas.length);
+
+// Exercise
+const calcAge = function (birthYeah) {
+  return 2037 - birthYeah;
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+
+console.log(calcAge(years));
+console.log(years);
+console.log(years + 10); // + Operator converts it to a string becos with cannot really do operations with arrays
+console.log(years - 10); // doesnt work either.
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
