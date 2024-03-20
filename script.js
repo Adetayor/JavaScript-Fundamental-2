@@ -121,7 +121,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jones'));
 console.log(yearsUntilRetirement(1970, 'Mike'));
-*/
+
 
 //Arrays
 const friend1 = 'Micheal';
@@ -166,3 +166,40 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
+*/
+
+//Method Array
+const friends = ['Micheal', 'Steven', 'Peter'];
+
+//Add elements
+const newLength = friends.push('Jay'); // Push method adds elements to the end of an array, push is a function.
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('John'); //Unshift method adds elements to the beginning of an array
+console.log(friends);
+
+//Remove Elements
+friends.pop(); //Removes the last elements of an array
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); //Removes the first elements of an array
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob')); //Elements that is not in the array
+
+friends.push(23);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes('23'));
+console.log(friends.includes(23));
+
+if (friends.includes('Peter'))  {
+  console.log('You have a friend called Peter');
+}
+if (friends.includes('Steven'))  {
+  console.log('You have a friend called Steven');
+}
