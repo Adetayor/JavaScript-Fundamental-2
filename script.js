@@ -166,7 +166,7 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
-*/
+
 
 //Method Array
 const friends = ['Micheal', 'Steven', 'Peter'];
@@ -202,4 +202,51 @@ if (friends.includes('Peter'))  {
 }
 if (friends.includes('Steven'))  {
   console.log('You have a friend called Steven');
+} */
+
+//Object (Another Data Structure after Arrays), In objects we define key values.
+const jonasArray = [  // Order matters when you want to retrieve dem 
+  'Jonas', 
+  'Schmedtamm', 
+  2037 - 1991, 
+  'teacher', 
+  ['Micheal', 'Peter', 'Steven']
+];
+
+const jonas = {    //Jonas Object {} are the object literals, Order does not matter when u want to retrieve them
+  firstName: 'Jonas',
+  lastName: 'Schmedtamm',
+  age: 2017 - 1991,
+  job: 'teacher',
+  friends: ['Micheal', 'Peter', 'Steven']
 }
+console.log(jonas);
+
+console.log(jonas.lastName); //Dot notation 1st way of getting a Property from an object
+console.log(jonas['lastName']); //You can any expression inside the bracket notation
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+//console.log(jonas.'last' + nameKey); //It will not work with the dot notation, use real property name, not finite property name
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
+//console.log(interestedIn);
+//console.log(jonas.interestedIn); //undefined is what we get when we try access a property or object that doesnt exist
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log('wrong request! Choose between firstName, lastName, age, job and friends')
+}
+
+
+//Using both the dot. and the bracket notation to add new properties to objects
+jonas.location = 'Portugal'
+jonas['twitter'] ='@jonasschmedtman';
+console.log(jonas);
+
+//challenge
+//'Jonas has 3 friends, and his best friend is called Micheal'
+console.log('${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}');
