@@ -250,3 +250,31 @@ console.log(jonas);
 //challenge
 //'Jonas has 3 friends, and his best friend is called Micheal'
 console.log('${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}');
+
+// Objects can hold differents of data, including arrays and objects inside objects
+//Objects method
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtamm',
+  age: 2017 - 1991,
+  job: 'teacher',
+  friends: ['Micheal', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+
+  //calcAge: function (birthYear) {
+   // return 2037 - birthYear;
+  //}
+  
+  //const calcAge = function (birthYear) {  //Any function attached to an object is a method
+   // return 2037 - birthYear;    //function values functions are values, methods are property that holds a function value
+  //}
+
+  calcAge: function () {
+    console.log(this);
+    return 2037 - this.birthyear;
+  }
+};
+  
+console.log(jonas.calcAge(1991));
+console.log(jonas['calcAge'(1991)]);
