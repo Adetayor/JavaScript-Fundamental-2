@@ -202,7 +202,7 @@ if (friends.includes('Peter'))  {
 }
 if (friends.includes('Steven'))  {
   console.log('You have a friend called Steven');
-} */
+} 
 
 //Object (Another Data Structure after Arrays), In objects we define key values.
 const jonasArray = [  // Order matters when you want to retrieve dem 
@@ -223,7 +223,7 @@ const jonas = {    //Jonas Object {} are the object literals, Order does not mat
 console.log(jonas);
 
 console.log(jonas.lastName); //Dot notation 1st way of getting a Property from an object
-console.log(jonas['lastName']); //You can any expression inside the bracket notation
+console.log(jonas['lastName']); //You can put any expression inside the bracket notation
 
 const nameKey = 'Name';
 console.log(jonas['first' + nameKey]);
@@ -252,12 +252,13 @@ console.log(jonas);
 console.log('${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}');
 
 // Objects can hold differents of data, including arrays and objects inside objects
-//Objects method
+//Objects method.  
+*/
 
 const jonas = {
   firstName: 'Jonas',
   lastName: 'Schmedtamm',
-  age: 2017 - 1991,
+  birthYear: 1991,
   job: 'teacher',
   friends: ['Micheal', 'Peter', 'Steven'],
   hasDriversLicense: true,
@@ -270,11 +271,31 @@ const jonas = {
    // return 2037 - birthYear;    //function values functions are values, methods are property that holds a function value
   //}
 
-  calcAge: function () {
-    console.log(this);
-    return 2037 - this.birthyear;
-  }
+  //calcAge: function () {
+   // console.log(this);
+   // return 2037 - this.birthyear; //jonas.birthYear might work in place of this keyword but it will violate the Don't Repeat Yoursef rule
+ // }
+//};
+ 
+calcAge: function () {
+  this.age = 2037 - this.birthYear;
+  return this.age;
+},
+
+getSummary: function () {
+  return `${this.firstName} is a ${this.calcAge()} -year old ${jonas.job}, and he has ${this.hasDriversLicense ? 
+  'a': 'no'} driver's license.`
+}
 };
-  
-console.log(jonas.calcAge(1991));
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
 console.log(jonas['calcAge'(1991)]);
+
+
+//Challenge
+// "Jonas is a 46-year old teacher, and he has a driver's license"
+console.log(jonas.getSummary());
