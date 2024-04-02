@@ -252,8 +252,7 @@ console.log(jonas);
 console.log('${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}');
 
 // Objects can hold differents of data, including arrays and objects inside objects
-//Objects method.  
-*/
+//OBJECTS METHOD.  
 
 const jonas = {
   firstName: 'Jonas',
@@ -299,3 +298,83 @@ console.log(jonas['calcAge'(1991)]);
 //Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 console.log(jonas.getSummary());
+*/
+
+
+//Iteration: The For Loop (loop allows us to automate repetitive task, task we have to perform over and over again)
+//console.log('Lifting weights repetition 1 🏋️‍♂️');
+//console.log('Lifting weights repetition 2 🏋️‍♂️');
+//console.log('Lifting weights repetition 3 🏋️‍♂️');
+//console.log('Lifting weights repetition 4 🏋️‍♂️');
+//console.log('Lifting weights repetition 5 🏋️‍♂️');
+//console.log('Lifting weights repetition 6 🏋️‍♂️');
+//console.log('Lifting weights repetition 7 🏋️‍♂️');
+//console.log('Lifting weights repetition 8 🏋️‍♂️');
+//console.log('Lifting weights repetition 9 🏋️‍♂️');
+//console.log('Lifting weights repetition 10 🏋️‍♂️');
+
+//For Loop (has 3 parts 1.intial value of a counter, 2. logical condition that is evaluated b4 each iteration of the loop codes are executed)
+//for loop keeps running while condition is TRUE, rep stands for repetition
+for(let rep = 1; rep <= 10; rep++) {  //(rep++ rep = rep + 1)
+//for(let rep = 5; rep <= 10; rep++) {
+//for(let rep = 1; rep <= 30; rep++) {
+  //console.log('Lifting weights repetition 1 🏋️‍♂️');
+  console.log('Lifting weights repetition ${rep} 🏋️‍♂️');
+}
+
+const jonas = [
+  'Jonas', 
+  'Schmedtamm', 
+  2037 - 1991, 
+  'teacher', 
+  ['Micheal', 'Peter', 'Steven'],
+  true
+];
+
+const types = [];
+
+// console.log(jonas[0])
+// console.log(jonas[1])
+//...
+// console.log(jonas[4])
+//jonas[5] does NOT exist, i should stay below 5
+
+//for(let i = 0; i < 5; i++) {
+  //console.log(jonas[0]);
+  //console.log(jonas[i]);
+//}
+
+for (let i = 0; i < jonas.length; i++) {
+  //Reading from jonas array
+  console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  //types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//Continue and Break
+console.log('----ONLY STRINGS---')
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== 'string') continue;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('----BREAK WITH NUMBER---')
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === 'number') break;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
