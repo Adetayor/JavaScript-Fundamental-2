@@ -298,7 +298,7 @@ console.log(jonas['calcAge'(1991)]);
 //Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 console.log(jonas.getSummary());
-*/
+
 
 
 //Iteration: The For Loop (loop allows us to automate repetitive task, task we have to perform over and over again)
@@ -313,7 +313,7 @@ console.log(jonas.getSummary());
 //console.log('Lifting weights repetition 9 🏋️‍♂️');
 //console.log('Lifting weights repetition 10 🏋️‍♂️');
 
-//For Loop (has 3 parts 1.intial value of a counter, 2. logical condition that is evaluated b4 each iteration of the loop codes are executed)
+//For Loop (has 3 parts 1.intial value of a counter, 2. logical condition that is evaluated b4 each iteration of the loop codes are executed, 3. Increasing of the counter)
 //for loop keeps running while condition is TRUE, rep stands for repetition
 for(let rep = 1; rep <= 10; rep++) {  //(rep++ rep = rep + 1)
 //for(let rep = 5; rep <= 10; rep++) {
@@ -363,7 +363,8 @@ for (let i = 0; i < years.length; i++) {
 }
 console.log(ages);
 
-//Continue and Break
+///////////
+//Continue and Break Loops
 console.log('----ONLY STRINGS---')
 for (let i = 0; i < jonas.length; i++) {
   if (typeof jonas[i] !== 'string') continue;
@@ -376,5 +377,50 @@ for (let i = 0; i < jonas.length; i++) {
   if (typeof jonas[i] === 'number') break;
 
   console.log(jonas[i], typeof jonas[i]);
+}*/
+
+const jonas = [
+  'Jonas', 
+  'Schmedtamm', 
+  2037 - 1991, 
+  'teacher', 
+  ['Micheal', 'Peter', 'Steven'],
+  true
+];
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+
+for(let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
 }
 
+//Creating a Loop inside a Loop
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`------ Starting exercise ${exercise}`);
+
+for (let rep = 1; rep < 6; rep++) {
+  console.log(`Exercise ${exercise}: Lifting weights repetition ${rep} 🏋️‍♂️`);
+  }
+}
+
+//While Loop
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+  }
+
+  let rep = 1;
+  while (rep <= 10) {  //All the while loop is the condition, which needs to stay true for it to keep running
+    console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♂️`);
+    rep++;
+  }
+
+  //let dice = Math.random() * 6
+  let dice = Math.trunc(Math.random() * 6) + 1; //Math.trunc is used to get rid of the decimals
+  console.log(dice);
+
+  while (dice !== 6) { //While loop is the right choice when we need a loop without a counter variable & don't know how many iterations we would have and for loop is the right choice when we know how many iterations & we would need a counter(in case of an array)
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end...');
+  }
