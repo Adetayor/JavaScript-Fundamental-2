@@ -88,7 +88,8 @@ const measureKelvin = function () {
 
     // C) FIX
     //value: prompt('Degrees celsius:') 
-    value: Number(prompt('Degrees celsius:')), // to fix we convert to a number function
+    //value: Number(prompt('Degrees celsius:')), // to fix we convert to a number function
+    value: 10,
   }
 
   //console.log(measurement); //The error is becos the prompt function always returns a string, no matter wat we input in the prompt window
@@ -110,4 +111,27 @@ console.log(measureKelvin());
 // And we set a breaking point, by clicking the left bar a red dot apears showing the break point
 // And when we reload the page den the excution will stop at exactly at the red point or break point
 // meaning excuetion will freeze in time and show exactly what the excuetion will look like at that moment in time and that includes all the values of all the defined variables
-// and then we can excute the rest of the function by hittin the step icon.
+// and then we can excute the rest of the function/script by hittin the step icon.
+
+//Using a debugger
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = 0;
+  let min = 0;
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+
+    debugger;
+     if (curTemp > max) max = curTemp;
+     if (curTemp < min) min = curTemp;
+   }
+  console.log(max, min);
+  return max - min;
+};
+const amplitudeBug = calcTempAmplitudeBug([3, 5,1], [9, 4, 5]);
+// A) IDENTIFY
+console.log(amplitudeBug);
