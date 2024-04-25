@@ -85,10 +85,29 @@ const measureKelvin = function () {
   const measurement = {
     type: 'temp',
     unit: 'celsius',
-    value: prompt('Degrees celsius:')
+
+    // C) FIX
+    //value: prompt('Degrees celsius:') 
+    value: Number(prompt('Degrees celsius:')), // to fix we convert to a number function
   }
 
-  const kelvin = measurement.value + 273;
+  //console.log(measurement); //The error is becos the prompt function always returns a string, no matter wat we input in the prompt window
+  
+  // B) FIND
+  console.table(measurement); //Another way of showing objects in a console
+  // console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;  // + operator when it sees a string, it will convert both sides of the operations to a string & then concatenate the strings.
   return kelvin;
-}
+};
+// A) IDENTIFY
 console.log(measureKelvin());
+
+// HOW TO USE A DEBUGGER IN GOOGLE CHROME
+// First go to sources on our chrome terminal and we choose the script file
+// And we set a breaking point, by clicking the left bar a red dot apears showing the break point
+// And when we reload the page den the excution will stop at exactly at the red point or break point
+// meaning excuetion will freeze in time and show exactly what the excuetion will look like at that moment in time and that includes all the values of all the defined variables
+// and then we can excute the rest of the function by hittin the step icon.
