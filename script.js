@@ -122,8 +122,8 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 console.log(yearsUntilRetirement(1991, 'Jones'));
 console.log(yearsUntilRetirement(1970, 'Mike'));
 
-
-//Arrays
+An expression produces a value
+//Arrays  is a data type and so is booleans, numerals, strings
 const friend1 = 'Micheal';
 const friend2 = 'Steven';
 const friend3 = 'Peter';
@@ -168,7 +168,7 @@ const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -
 console.log(ages);
 
 
-//Method Array
+//Method Array // Methods are functions attached to an object
 const friends = ['Micheal', 'Steven', 'Peter'];
 
 //Add elements
@@ -180,7 +180,7 @@ friends.unshift('John'); //Unshift method adds elements to the beginning of an a
 console.log(friends);
 
 //Remove Elements
-friends.pop(); //Removes the last elements of an array
+friends.pop(); //Removes the last elements of an array //Pop doesnt need quotation, doesnt need an argument 
 const popped = friends.pop();
 console.log(popped);
 console.log(friends);
@@ -203,8 +203,9 @@ if (friends.includes('Peter'))  {
 if (friends.includes('Steven'))  {
   console.log('You have a friend called Steven');
 } 
+console.log(friends.reverse());
 
-//Object (Another Data Structure after Arrays), In objects we define key values.
+//Object (Another Data Structure after Arrays), object has key value pairs, In objects we define key values.
 const jonasArray = [  // Order matters when you want to retrieve dem 
   'Jonas', 
   'Schmedtamm', 
@@ -213,6 +214,8 @@ const jonasArray = [  // Order matters when you want to retrieve dem
   ['Micheal', 'Peter', 'Steven']
 ];
 
+
+// primitive values are numbers and dey are immutatable but array is not a primitive value so it can be mutable
 const jonas = {    //Jonas Object {} are the object literals, Order does not matter when u want to retrieve them
   firstName: 'Jonas',
   lastName: 'Schmedtamm',
