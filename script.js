@@ -427,3 +427,13 @@ for (let rep = 1; rep <= 10; rep++) {
     dice = Math.trunc(Math.random() * 6) + 1;
     if (dice === 6) console.log('Loop is about to end...');
   }
+
+
+  const scores = [20, 10, 23, 12, 30, 40];
+  console.log(scores);
+  const kk = scores.map((duk) => duk / 5 * 2);
+  console.log(kk);
+
+  const names = ["shola", "becky", "timi", "dara"];
+  const di = names.map((sol)=>sol.toUpperCase());
+  console.log(di);
